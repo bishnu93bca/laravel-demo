@@ -17,7 +17,7 @@ In addition to checking for the CSRF token as a POST parameter, the VerifyCsrfTo
 
 <pre style="background: #f2f2f2; overflow-x: scroll; padding: 10px;">
 
-<span style="font-weight: 400;">"<meta name="csrf-token" content="{{ csrf_token() }}">"
+<span style="font-weight: 400;">#"<meta name="csrf-token" content="{{ csrf_token() }}">"
 </span>
 </pre>
 
@@ -26,10 +26,10 @@ Then, once you have created the meta tag, you can instruct a library like jQuery
 
 <pre style="background: #f2f2f2; overflow-x: scroll; padding: 10px;">
 	<span style="font-weight: 400;">
-	"$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});"
+	$.ajaxSetup({
+    		headers: {
+        			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    		}
+	});
 </span>
 </pre>
