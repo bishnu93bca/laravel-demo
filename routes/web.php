@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::get('role',[
    'uses' => 'TestController@index',
 ]);
+Route::get('user/{id}', 'UserController@show');
