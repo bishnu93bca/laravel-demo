@@ -20,12 +20,8 @@ In addition to checking for the CSRF token as a POST parameter, the VerifyCsrfTo
 
 Then, once you have created the meta tag, you can instruct a library like jQuery to automatically add the token to all request headers. This provides simple, convenient CSRF protection for your AJAX based applications:
 
-<pre style="background: #f2f2f2; overflow-x: scroll; padding: 10px;">
-	<span style="font-weight: 400;">
-	$.ajaxSetup({
-    		headers: {
-        			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    		}
-	});
-</span>
-</pre>
+<pre class=" language-php"><code class=" language-php">$<span class="token punctuation">.</span><span class="token function">ajaxSetup</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token single-quoted-string string">'X-CSRF-TOKEN'</span><span class="token punctuation">:</span> $<span class="token punctuation">(</span><span class="token single-quoted-string string">'meta[name="csrf-token"]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'content'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
