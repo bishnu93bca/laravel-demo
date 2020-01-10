@@ -11,8 +11,18 @@
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+##CSRF Protection
+##Introduction
+##Excluding URIs
+##X-CSRF-Token
+##X-XSRF-Token
 
-## X-CSRF-TOKEN
+<p>Anytime you define an HTML form in your application, you should include a hidden CSRF token field in the form so that the CSRF protection middleware can validate the request. You may use the <code class=" language-php">@csrf</code> Blade directive to generate the token field:</p>
+<pre class=" language-php"><code class=" language-php"><span class="token operator">&lt;</span>form method<span class="token operator">=</span><span class="token double-quoted-string string">"POST"</span> action<span class="token operator">=</span><span class="token double-quoted-string string">"/profile"</span><span class="token operator">&gt;</span>
+    @csrf
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span></code></pre>
+
 In addition to checking for the CSRF token as a POST parameter, the VerifyCsrfToken middleware will also check for the X-CSRF-TOKEN request header. You could, for example, store the token in an HTML meta tag:
 
 <pre class=" language-php"><code class=" language-php"><span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token double-quoted-string string">"csrf-token"</span> content<span class="token operator">=</span><span class="token double-quoted-string string">"{{ csrf_token() }}"</span><span class="token operator">&gt;</span></code></pre>
