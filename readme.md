@@ -24,3 +24,10 @@ Then, once you have created the meta tag, you can instruct a library like jQuery
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });"
+
+<pre style="background: #f2f2f2; overflow-x: scroll; padding: 10px;"><span style="font-weight: 400;">
+# chmod +x dbbackup.sh</span>
+<span style="font-weight: 400;"># Run the script to make sure it's all good</span>
+<span style="font-weight: 400;"># bash dbbackup.sh
+</span>
+</pre>
