@@ -15,7 +15,12 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 ## X-CSRF-TOKEN
 In addition to checking for the CSRF token as a POST parameter, the VerifyCsrfToken middleware will also check for the X-CSRF-TOKEN request header. You could, for example, store the token in an HTML meta tag:
 
-"<meta name="csrf-token" content="{{ csrf_token() }}">"
+<pre style="background: #f2f2f2; overflow-x: scroll; padding: 10px;"><
+
+<span style="font-weight: 400;">\<meta name="csrf-token" content="{{ csrf_token() }}">
+</span>
+</pre>
+
 
 Then, once you have created the meta tag, you can instruct a library like jQuery to automatically add the token to all request headers. This provides simple, convenient CSRF protection for your AJAX based applications:
 
